@@ -52,3 +52,33 @@
 
 // console.log(isChek && !isClose);
 // console.log(isChek || isClose);
+
+let number0films = prompt('Cколько фильмов вы уже посмотрели?', '0');
+
+
+let personalMovieDB = {
+    count: number0films,
+    movies: {
+
+    },
+    actors:{
+
+    },
+    genres:[
+
+    ],
+    privat: false
+
+
+} 
+
+
+let a = prompt('один из просмотренных фильмов?');
+let b = prompt('насколько оцените его?');
+let c = prompt('один из просмотренных фильмов?');
+let d = prompt('насколько оцените его?');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
