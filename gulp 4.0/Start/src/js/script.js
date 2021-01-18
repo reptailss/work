@@ -1,5 +1,5 @@
 "use strict";
- 
+
 
 // let number = 5;
 // const leftb = 1;
@@ -53,7 +53,37 @@
 // console.log(isChek && !isClose);
 // console.log(isChek || isClose);
 
-let number0films = prompt('Cколько фильмов вы уже посмотрели?', '0');
+
+// let num = 50;
+// while (num <= 55){
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while(num < 55 );
+
+// for (let i = 1; i < 8; i++)
+// {
+//     if (i === 6){
+//         // break;
+//         continue;
+//     }
+//     console.log(i);
+
+// }
+
+
+
+
+
+
+
+
+let number0films = +prompt('Cколько фильмов вы уже посмотрели?', '0');
 
 
 let personalMovieDB = {
@@ -61,24 +91,39 @@ let personalMovieDB = {
     movies: {
 
     },
-    actors:{
+    actors: {
 
     },
-    genres:[
+    genres: [
 
     ],
     privat: false
 
 
-} 
+}
 
+for (let i = 0; i < 4; i++) {
+    const a = prompt('один из просмотренных фильмов?', '');
+    const b = prompt('насколько оцените его?', '');
+    if (a !== null && b !== null && a !== '' && b !== '' && a.length < 10) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } 
+    else {
+        console.log('error');
+        i--;
+    }
 
-let a = prompt('один из просмотренных фильмов?');
-let b = prompt('насколько оцените его?');
-let c = prompt('один из просмотренных фильмов?');
-let d = prompt('насколько оцените его?');
+}
+if (personalMovieDB.count < 10) {
+    console.log('Просмотренно слишком мало фильмов');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+    console.log('ну норм');
+} else if (personalMovieDB.count > 30) {
+    console.log('ну вы киноман');
+} else {
+    console.log('произошла ошибка')
+}
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
